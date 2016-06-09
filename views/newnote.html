@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{ title }}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'/>
+    </head>
+    <body>
+    <header class="siteHeader">
+    <!-- This section gets pushed to the left side-->
+    <div class="siteHeader__section">
+      <div class="siteHeader__item siteHeaderLogo">
+        <div class="fa fa-inbox"></div>
+      </div>
+      <div class="siteHeader__item siteHeaderButton">
+        <a class="siteHeader__link" href="/">Home</a>
+      </div>
+      <div class="siteHeader__item siteHeaderButton is-site-header-item-selected">
+        <a class="siteHeader__link" href="newnote">New Note</a>
+      </div>
+      <div class="siteHeader__item siteHeaderButton">Discuss</div>
+    </div>
+    <!-- This section gets pushed to the right side-->
+    <div class="siteHeader__section">
+      <div class="siteHeader__item siteHeaderButton">Settings</div>
+      <div class="siteHeader__item siteHeaderButton">Log in</div>
+    </div>
+  </header>
+
+  <h1 class="newNoteHeader">New Meeting Note</h1>
+  <p class="newNoteHeader__description">Use this form to enter your daily meeting notes...</p>
+
+  <!-- Form for adding note -->
+  <form class="meetingNoteForm" action="newnote" method="post">
+  <legend class="meetingNoteForm__legend">Enter a meeting note</legend>
+  <!-- Member Name -->
+  <div class="meetingNoteForm__group">
+    <label for="memberName">Member:</label>
+    <select name="memberName" id="memberName">
+      <option value="None">(Select Name)</option>
+      <option value="John">John</option>
+      <option value="Jack">Jack</option>
+      <option value="Marie">Marie</option>
+      <option value="Walter">Walter</option>
+    </select>
+  </div>
+
+  <!-- Project Name -->
+  <div class="meetingNoteForm__group">
+    <label for="projectName">Current project or task:</label>
+    <select name="projectName" id="projectName">
+      <option value="None">(Select Project)</option>
+      <option value="John">Matrix</option>
+      <option value="Jack">Robots</option>
+      <option value="Marie">WebWorkers</option>
+      <option value="Walter">Flexboxes</option>
+    </select>
+  </div>
+
+  <div class="meetingNoteForm__group">
+    <label for="workYesterday">What did you work on yesterday?</label>
+    <textarea name="workYesterday" id="" rows="5">Yesterday</textarea>
+  </div>
+
+  <div class="meetingNoteForm__group">
+    <label for="workToday">What did you work on today?</label>
+    <textarea name="workToday" id="" rows="5">Today</textarea>
+  </div>
+
+  <div class="meetingNoteForm__group">
+    <label for="impediments">Any impediment(s)?</label>
+    <textarea name="impediments" id="" rows="2">None</textarea>
+  </div>
+
+  <button class="noteSubmit" type="submit">Save</button>
+
+</form>
+
+    </body>
+</html>

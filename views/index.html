@@ -2,10 +2,31 @@
 <html>
   <head>
     <title>{{ title }}</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <header class="siteHeader">
+    <!-- This section gets pushed to the left side-->
+    <div class="siteHeader__section">
+      <div class="siteHeader__item siteHeaderLogo">
+        <div class="fa fa-inbox"></div>
+      </div>
+      <div class="siteHeader__item siteHeaderButton is-site-header-item-selected">
+        <a class="siteHeader__link"href="/">Home</a>
+      </div>
+      <div class="siteHeader__item siteHeaderButton">
+        <a class="siteHeader__link" href="newnote">New Note</a>
+      </div>
+      <div class="siteHeader__item siteHeaderButton">Discuss</div>
+    </div>
+    <!-- This section gets pushed to the right side-->
+    <div class="siteHeader__section">
+      <div class="siteHeader__item siteHeaderButton">Settings</div>
+      <div class="siteHeader__item siteHeaderButton">Log in</div>
+    </div>
+  </header>
     <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+    <p>All meetings will be displayed here...</p>
   </body>
 </html>
