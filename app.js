@@ -8,6 +8,13 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+//Mongoose ODM
+var mongoose = require('mongoose');
+
+// Connect MongoDB
+mongoose.connect('mongodb://tst-user:tst-pass@ds021943.mlab.com:21943/standup-ps');
+
+
 var app = express();
 
 // assign swig view engine
